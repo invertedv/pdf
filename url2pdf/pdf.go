@@ -1,3 +1,4 @@
+// url2pdf is a simple implementation of pdf
 package main
 
 import (
@@ -14,6 +15,8 @@ func main() {
 
 	workOrderFile := flag.String("list", "", "string")
 	outPDF := flag.String("out", "", "string")
+
+	flag.Parse()
 
 	if workOrder, err = pdf.GetWorkOrder(*workOrderFile); err != nil {
 		panic(err)
